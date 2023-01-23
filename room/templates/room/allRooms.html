@@ -1,0 +1,18 @@
+{% extends 'core/base.html'%}
+
+{% block title %}Welcome | {% endblock%}
+
+{% block content %}
+<div class="p-10 lg:p-20 text-center">
+    <h1 class="text-5xl lg:text-9xl text-yellow-900">All Rooms</h1>
+</div>
+<div class="p-10 lg:p-20 text-center">
+    <p class="text-yellow-900">You can see below all existing rooms. If you want to add a new room or chat on an existing room go to Chat page.</p>
+    <br>
+    <ul>
+        {% for room in room_list %}
+        <li class="text-yellow-900">{{ room.name }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
